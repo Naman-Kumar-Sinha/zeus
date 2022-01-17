@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "zeus-app": "apps/zeus-app",
+    "zeus-app-e2e": "apps/zeus-app-e2e"
+  }
+}

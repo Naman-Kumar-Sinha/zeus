@@ -1,0 +1,28 @@
+{
+  "root": "apps/zeus-app-e2e",
+  "sourceRoot": "apps/zeus-app-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/zeus-app-e2e/cypress.json",
+        "devServerTarget": "zeus-app:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "zeus-app:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/zeus-app-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["zeus-app"]
+}
